@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+  <title>jquery.branches</title>
+  <link href="jquery.branches.css" rel="stylesheet" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script src="jquery.branches.js"></script>
+  <script>$(function() { $('#navigation').branches(); });</script>
+
+  <style>
+    body {
+      font: 14px/18px Arial, sans-serif;
+      margin: 1em;
+    }
+
+    a {
+      color: #00f;
+      text-decoration: none;
+    }
+
+      a:visited { color: #00f; }
+
+    .branches {}
+
+      .branches ul {
+        height: 200px;
+        width: 100px;
+      }
+
+        .branches li a {
+          background-color: #f0f0f0;
+          border: 1px solid #aaa;
+          border-radius: 5px;
+          color: #555;
+          margin-bottom: 0.5em;
+          padding: 2px;
+        }
+
+        .branches li a:hover, .branches li.on > a {
+          border-color: #777;
+          color: #111;
+        }
+  </style>
+</head>
+<body>
+  <div id="navigation">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li>
+        <a href="#">Blog</a>
+        <ul>
+          <li>
+            <a href="#">2012</a>
+            <ul>
+              <li>
+                <a href="#">January</a>
+                <ul>
+                  <li><a href="#">Test 1</a></li>
+                  <li><a href="#">Test 2</a></li>
+                  <li><a href="#">Test 3</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">2011</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+
+/**
+ * jquery.branches
+ *
+ * The minimum required CSS. See "example.html" for an example of how to
+ * customize the look and feel.
+ *
+ * Author: Alex Little
+ * License: MIT
+ * Homepage: http://github.com/alxlit/jquery-branches
+ */
+
+.branches {
+  display: block;
+  position: relative;
+}
+
+  .branches ul {
+    bottom: 0;
+    display: block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+    .branches ul ul {
+      display: none;
+      left: 100%;
+      position: absolute;
+      top: 0;
+    }
+
+  .branches li {
+    clear: left;
+    display: inline-block;
+    float: left;
+    padding: 0;
+  }
+
+    .branches li a {
+      display: block;
+    }
+
+    .branches li canvas {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
+    }
+
