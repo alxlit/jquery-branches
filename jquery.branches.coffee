@@ -32,6 +32,8 @@ $.fn.branches = (cfg) ->
     root.init $.extend {}, defaults, cfg
     $.data @, 'root', root
 
+  return @
+
 class Leaf
   constructor: (item, @parent) ->
     @state = 'preinit'
@@ -43,8 +45,6 @@ class Leaf
     if @canvas
       ctx = @canvas.getContext '2d'
       ctx.clearRect 0, 0, @canvas.width, @canvas.height
-
-      #@canvas.width = @canvas.width if @canvas
 
   connectTo: (other, clear) ->
     return unless @canvas
